@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
 
 
     const logout = () => {
+        if (!confirm("are you sure to Logout this account")) return;
         localStorage.removeItem('user');
         localStorage.removeItem('expirationTime');
         setUser(null);
@@ -34,7 +35,7 @@ export const UserProvider = ({ children }) => {
 
     const login = (userData, expiresIn) => {
 
-        // 07-01-2024
+       
         const expirationTime = new Date().getTime() + expiresIn * 1000;
 
         localStorage.setItem('expirationTime', expirationTime.toString());

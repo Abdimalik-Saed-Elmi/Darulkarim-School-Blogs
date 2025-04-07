@@ -10,7 +10,7 @@ const postSchema = new Schema({
     content: {
         type: String,
         required: true,
-        validate: [value => value.length <= 500, 'Content should be up to 500 characters long']
+        // validate: [value => value.length <= 500, 'Content should be up to 500 characters long']
     },
     image: {
         type: String,  // This will store the URL/path to the image.

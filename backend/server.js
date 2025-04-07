@@ -3,7 +3,7 @@
 import express from 'express';
 import connectDB from './config/db.js';
 import chalk from 'chalk';
-import { registerUser } from './controller/userController.js';
+// import { registerUser } from './controller/userController.js';
 import userRouter from './routes/user.js';
 import cookieParser from 'cookie-parser';
 import postRouter from './routes/post.js';

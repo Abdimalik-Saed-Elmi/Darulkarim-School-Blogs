@@ -28,8 +28,8 @@ const userSchema = new Schema({
         select: false,
         validate: [
             {
-                validator: value => validator.isStrongPassword(value),
-                message: "Password must contain one more alphanumeric character and symbols"
+                validator: value => value.length >= 6,
+                message: "Password must be at least 6 characters long"
             }
         ]
     }

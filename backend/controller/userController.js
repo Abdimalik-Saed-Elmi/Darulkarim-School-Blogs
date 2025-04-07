@@ -71,7 +71,7 @@ export const loginUser = async (req, res) => {
 
         // token generation
 
-        const expiresIn = 7 * 24 * 60 * 60; // 7 days
+        const expiresIn = 30 * 24 * 60 * 60; // 30 days
 
         const token = jwt.sign({ _id: isUserExists._id }, JWT_SECRET, { expiresIn });
 

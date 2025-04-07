@@ -65,6 +65,8 @@ export default function DialogForm({ buttonTitle, postToEdit }) {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 console.log(response.data);
+                
+                
             
             }
 
@@ -101,15 +103,15 @@ export default function DialogForm({ buttonTitle, postToEdit }) {
                     <div className="space-y-4">
                         <div>
                             <Label htmlFor="title">Title</Label>
-                            <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                            <Input required id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
                         </div>
                         <div>
                             <Label htmlFor="content">Content</Label>
-                            <Input id="content" value={content} onChange={(e) => setContent(e.target.value)} />
+                            <Input required id="content" value={content} onChange={(e) => setContent(e.target.value)} />
                         </div>
                         <div>
                             <Label htmlFor="image">Image</Label>
-                            <Input type="file" id="image" accept="image/*" onChange={handleImageChange} />
+                            <Input required type="file" id="image" accept="image/*" onChange={handleImageChange} />
                             {preview && <img src={preview} alt="Preview" className="mt-4 w-full h-[200px]" />}
                         </div>
                         <DialogFooter>
