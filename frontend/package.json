@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^12.6.0",
+    "fullstack-codewave": "file:..",
     "lucide-react": "^0.303.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
