@@ -7,13 +7,15 @@ import chalk from 'chalk';
 import userRouter from './routes/user.js';
 import cookieParser from 'cookie-parser';
 import postRouter from './routes/post.js';
+import cors from 'cors'
 import path from 'path'
 
 const app = express();
+
 const PORT = 8000;
 
 const __dirname = path.resolve()
-
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
